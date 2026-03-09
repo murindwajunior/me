@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murindwa Junior | Python Developer & Educator</title>
+    <!-- Tailwind CSS for Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3b82f6', // Blue
+                        secondary: '#1e293b', // Slate 800
+                        dark: '#0f172a', // Slate 900
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for things Tailwind is too verbose for */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans bg-dark text-gray-200 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold tracking-tighter text-white">
+                        Murindwa<span class="text-primary">.</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-300 hover:text-white transition px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition px-3 py-2 text-sm font-medium">Skills</a>
+                    <a href="#contact" class="bg-primary hover:bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-medium transition shadow-lg shadow-blue-500/30">Let's Talk</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card absolute w-full left-0 top-20 border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+                <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 w-full text-center">Home</a>
+                <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 w-full text-center">About</a>
+                <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 w-full text-center">Services</a>
+                <a href="#skills" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 w-full text-center">Skills</a>
+                <a href="#contact" class="mobile-link block px-3 py-2 mt-4 rounded-full bg-primary text-white text-base font-medium w-[80%] text-center">Let's Talk</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-screen">
+        <!-- Background Decoration -->
+        <div class="absolute top-1/4 left-0 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob"></div>
+        <div class="absolute top-1/3 right-0 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-primary font-semibold tracking-wide uppercase mb-3 text-sm flex items-center justify-center gap-2">
+                    <span class="w-8 h-[2px] bg-primary inline-block"></span>
+                    Hello, World
+                    <span class="w-8 h-[2px] bg-primary inline-block"></span>
+                </p>
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    I'm <span class="gradient-text">Murindwa Junior</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8 font-light">
+                    Python Developer | Systems Architect | Web Designer | Programming Educator
+                </p>
+                <p class="text-base text-gray-400 mb-10 max-w-2xl mx-auto">
+                    I build robust scalable systems, design beautiful web experiences, and empower the next generation of developers through expert programming instruction.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="bg-primary hover:bg-blue-600 text-white px-8 py-3.5 rounded-full font-medium transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="#contact" class="bg-transparent border border-gray-600 hover:border-gray-400 text-white px-8 py-3.5 rounded-full font-medium transition flex items-center justify-center gap-2">
+                        <i class="far fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-secondary/30 relative border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image/Visual side -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-emerald-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <div class="relative glass-card p-8 rounded-2xl ring-1 ring-gray-800">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <pre class="text-sm font-mono text-gray-300 overflow-x-auto"><code><span class="text-pink-500">class</span> <span class="text-yellow-300">Developer</span>:
+    <span class="text-pink-500">def</span> <span class="text-blue-400">__init__</span>(self):
+        self.name = <span class="text-green-400">"Murindwa Junior"</span>
+        self.roles = [<span class="text-green-400">"Python Dev"</span>, <span class="text-green-400">"Web Designer"</span>]
+        self.passion = <span class="text-green-400">"Teaching Programming"</span>
+
+    <span class="text-pink-500">def</span> <span class="text-blue-400">build_future</span>(self):
+        <span class="text-pink-500">return</span> <span class="text-green-400">"Writing clean, scalable code."</span>
+
+    <span class="text-pink-500">def</span> <span class="text-blue-400">educate</span>(self, student):
+        student.knowledge += <span class="text-purple-400">100</span>
+        <span class="text-pink-500">return</span> student</code></pre>
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Bridging the gap between <span class="text-primary">complex logic</span> and <span class="text-emerald-400">user experience</span>.</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        I am a versatile software professional with a deep specialization in Python. Whether it's crafting complex backend systems, developing intuitive web interfaces, or scripting automation tools, I bring ideas to life with clean and efficient code.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        Beyond development, I am a dedicated programming teacher. I believe in breaking down complex concepts into digestible pieces, helping aspiring developers master Python, web technologies, and software engineering principles.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l-2 border-primary pl-4">
+                            <h4 class="text-white font-bold text-2xl mb-1">5+</h4>
+                            <p class="text-sm text-gray-400">Years Experience</p>
+                        </div>
+                        <div class="border-l-2 border-emerald-500 pl-4">
+                            <h4 class="text-white font-bold text-2xl mb-1">100+</h4>
+                            <p class="text-sm text-gray-400">Students Taught</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-primary tracking-widest uppercase mb-2">What I Do</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Services & Expertise</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-lg bg-blue-500/10 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition">
+                        <i class="fab fa-python text-3xl text-blue-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Python Development</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        End-to-end software solutions, data processing scripts, API development, and complex backend systems using Python (Django, Flask, FastAPI).
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-lg bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition">
+                        <i class="fas fa-desktop text-3xl text-purple-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Web Design & Dev</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Crafting responsive, visually appealing, and user-centric websites. I merge modern HTML/CSS/JS frameworks to build seamless frontend experiences.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300 group">
+                    <div class="w-14 h-14 rounded-lg bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition">
+                        <i class="fas fa-network-wired text-3xl text-emerald-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Systems Design</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Architecting scalable, secure, and maintainable software systems tailored to specific business logic and operational requirements.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-2xl hover:-translate-y-2 transition duration-300 group lg:col-start-2">
+                    <div class="w-14 h-14 rounded-lg bg-yellow-500/10 flex items-center justify-center mb-6 group-hover:bg-yellow-500/20 transition">
+                        <i class="fas fa-chalkboard-teacher text-3xl text-yellow-400"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Programming Instructor</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Mentoring individuals and teams. I provide structured lessons in Python, web development, and computer science fundamentals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-secondary/20 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Technical Arsenal</h3>
+                <p class="text-gray-400 max-w-2xl mx-auto">Tools and technologies I use to build systems and teach my students.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                <!-- Skill Tags -->
+                <div class="flex items-center gap-2 px-6 py-3 glass-card rounded-full border-gray-700 hover:border-primary transition cursor-default">
+                    <i class="fab fa-python text-xl text-yellow-400"></i>
+                    <span class="text-white font-medium">Python</span>
+                </div>
+                <div class="flex items-center gap-2 px-6 py-3 glass-card rounded-full border-gray-700 hover:border-orange-500 transition cursor-default">
+                    <i class="fab fa-html5 text-xl text-orange-500"></i>
+                    <span class="text-white font-medium">HTML5</span>
+                </div>
+                <div class="flex items-center gap-2 px-6 py-3 glass-card rounded-full border-gray-700 hover:border-blue-500 transition cursor-default">
+                    <i class="fab fa-css3-alt text-xl text-blue-500"></i>
+                    <span class="text-white font-medium">CSS3 / Tailwind</span>
+                </div>
+                <div class="flex items-center gap-2 px-6 py-3 glass-card rounded-full border-gray-700 hover:border-yellow-300 transition cursor-default">
+                    <i class="fab fa-js text-xl text-yellow-300"></i>
+                    <span class="text-white font-medium">JavaScript</span>
+                </div>
+                <div class="flex items-center gap-2 px-6 py-3 glass-card rounded-full border-gray-700 hover:border-green-600 transition cursor-default">
+                    <i class="fas fa-leaf text-xl text-green-600"></i>
+                    <span class="text-white font-medium">Django</span>
+                </div>
+                <div class="flex items-center gap-2 px-6 py-3 glass-card rounded-full border-gray-700 hover:border-gray-400 transition cursor-default">
+                    <i class="fas fa-database text-xl text-gray-400"></i>
+                    <span class="text-white font-medium">SQL & Databases</span>
+                </div>
+                <div class="flex items-center gap-2 px-6 py-3 glass-card rounded-full border-gray-700 hover:border-purple-400 transition cursor-default">
+                    <i class="fas fa-book-open text-xl text-purple-400"></i>
+                    <span class="text-white font-medium">Curriculum Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-primary rounded-full mix-blend-multiply filter blur-[80px] opacity-40"></div>
+                
+                <div class="text-center mb-10 relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's Build Something or Learn Together</h2>
+                    <p class="text-gray-400">Whether you need a new system built, a website designed, or are looking for a programming tutor, my inbox is open.</p>
+                </div>
+
+                <form onsubmit="event.preventDefault(); alert('In a real environment, this would send an email. For now, it is a static demo!');" class="space-y-6 relative z-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-dark/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition" placeholder="John Doe" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full bg-dark/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                        <select id="subject" class="w-full bg-dark/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition">
+                            <option>Python / System Development</option>
+                            <option>Web Design</option>
+                            <option>Programming Tutoring</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea id="message" rows="4" class="w-full bg-dark/50 border border-gray-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition" placeholder="How can I help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-4 rounded-xl transition flex justify-center items-center gap-2">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <a href="#" class="text-xl font-bold tracking-tighter text-white">
+                    Murindwa<span class="text-primary">.</span>
+                </a>
+                <p class="text-gray-500 text-sm mt-1">&copy; 2026 Murindwa Junior. All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Add blur effect to navbar on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
